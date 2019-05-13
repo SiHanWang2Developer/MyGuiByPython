@@ -1,0 +1,31 @@
+# -*- coding: utf-8 -*-
+ 
+#Radiobutton
+import tkinter as tk
+window=tk.Tk()
+window.title('my title')
+window.geometry('500x500')
+#输出窗口
+
+l1=tk.Label(window,bg='yellow',width=20,height=2,text='')
+l1.pack()
+
+
+def print_selection():
+    l1.config(text='You have selected '+var1.get())
+   
+var1=tk.StringVar()
+r1=tk.Radiobutton(window,text='option A',
+                 variable=var1,value='A',
+                 command=print_selection)
+r1.pack()
+
+r2=tk.Radiobutton(window,text='option B',
+                 variable=var1,value='B',
+                 command=print_selection)
+r2.pack()
+r2=tk.Radiobutton(window,text='option C',
+                 variable=var1,value='C',
+                 command=print_selection)
+r2.pack()
+window.mainloop()
